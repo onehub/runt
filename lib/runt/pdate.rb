@@ -143,23 +143,23 @@ module Runt
     PDate.civil(DEFAULT, *args)
   end
 
-  #
-  # Custom dump which preserves DatePrecision   
+  # #
+  # # Custom dump which preserves DatePrecision   
+  # # 
+  # # Author:: Jodi Showers
+  # #
+  # def marshal_dump
+  #   [date_precision, ajd, start, offset]
+  # end
   # 
-  # Author:: Jodi Showers
-  #
-  def marshal_dump
-    [date_precision, ajd, start, offset]
-  end
-
-  #
-  # Custom load which preserves DatePrecision   
-  # 
-  # Author:: Jodi Showers
-  #
-  def marshal_load(dumped_obj)
-    @date_precision, @ajd, @sg, @of=dumped_obj
-  end
+  # #
+  # # Custom load which preserves DatePrecision   
+  # # 
+  # # Author:: Jodi Showers
+  # #
+  # def marshal_load(dumped_obj)
+  #   @date_precision, @ajd, @sg, @of=dumped_obj
+  # end
   
 end
 end
